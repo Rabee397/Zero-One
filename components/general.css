@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.flex-full{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px 20px;   
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.flex-align{
+    display: flex;
+    align-items: center;
+    
+}
+.main-padd{
+    padding: 0 10%;
+}
+.light{
+    color: white;
+}
+.light-gray-bg{
+    background-color: rgb(240, 243, 243);
+    padding: 60px 10% ;
+}
