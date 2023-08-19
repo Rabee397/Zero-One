@@ -1,108 +1,3 @@
-:root{
-    --main-color: rgb(76, 168, 76);
-    --gray-bg: rgb(240, 243, 243);
-}
-
-/* header-section */
-header{
-    height: 70px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(76, 168, 76);
-    z-index: 100;
-    transition: background-color 1s;
-}
-.header-logo , .logo{
-    font-size: 1.2rem;
-}
-nav{
-    gap: 30px;
-    height: 100%;
-}
-nav a{
-    color: white;
-}
-.nav-item{
-    gap: 4px;
-    cursor: pointer;
-    position: relative; 
-    width:fit-content;
-    height: 100%;
-    
-    
-}
-
-.nav-item span{
-   display: block;
-   width: 100%;
-   padding-left: 4px; 
-   font-size: 0.9rem;
-}
-.nav-item i{
-    font-size: 0.7rem;
-    padding-left:  5px ; 
-}
-@keyframes fade {
-    0%{
-        opacity: 0;
-        
-       
-    }
-    100%{
-        opacity: 100%;
-        
-        
-    }
-}    
-.drop{
-    position: absolute;
-    top: 70px;
-    width: 300px;
-    padding: 0px;
-    align-items: flex-start;
-    background-color: rgb(53, 52, 52);
-    flex-direction: column;
-    gap:0;
-    border-top: 1px solid white;
-    display: none;
-    z-index: 100;
-    animation: fade 0.3s;
-    animation-timing-function: ease-in-out;
-}
-.drop-mix{
-    right: 0px;
-}
-.drop a{
-    padding:10px ;
-    width: 100%;
-    transition: 0.3s;
-    display: block;
-}
-
-.drop a:hover{
-    background-color: rgba(138, 130, 130, 0.5);
-    padding-left: 20px;
-}
-
-.nav-item:hover .drop{
-    display: flex;
-}
-.mob{
-    display: none;
-} 
-.mob i{
-    padding: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.192);
-    cursor: pointer;
-}
-.mob i:hover{
-    background-color: rgb(94, 90, 90);
-}
-.lang{
-    color:aqua;
-}
 /* main-section */
 main{
     margin-top: 70px;
@@ -145,6 +40,7 @@ main{
 .main-search{
     position: relative;
     width: 700px;
+    
 }
 .main-search input{
     padding: 20px;
@@ -156,7 +52,6 @@ main{
 .main-search button{
     padding: 10px;
     position: absolute;
-    top: 9px;
     right: 5px;
     cursor: pointer;
     background-color: var(--main-color);
@@ -300,82 +195,9 @@ section a:hover{
     color: var(--main-color);
 }
 
-/* footer */
-footer{
-    background-color: black;
-    height: 70px;
-    color: white;
-}
-
-.copy-right i{
-    color: var(--main-color);
-}
-
-.icons a{
-    display: block;
-    padding: 9px;
-    color: rgba(243, 237, 237 , 0.7);
-    background-color: rgb(128, 128, 122);
-    margin-left: 10px;
-}
-.icons a:hover{
-    background-color: transparent;
-}
-.icons a:nth-child(1):hover{
-    color: rgb(41, 113, 196);
-}
-.icons a:nth-child(2):hover{
-    color: rgb(89, 126, 182);
-}
-.icons a:nth-child(3):hover{
-    color: rgb(252, 252, 255);
-}
-.icons a:nth-child(4):hover{
-    color: rgb(50, 211, 90);
-}
 
 /* media-query */
-@media(max-width: 1024px){
-    /* header */
-    header{
-        background-color: rgb(49, 47, 47);
-        border-bottom: 1px solid black;
-         
-    }
-    .nav-lists{
-        flex-direction: column;
-        background-color: rgb(49, 47, 47);
-        height: 50vh;
-        width: 100%;
-        position: fixed;
-        top: 70px;
-        right: 0;
-        padding: 20px 10% 20px 10%;
-        display: none;
-        
-    }
-    .nav-lists.active{
-        display: flex;
-        animation: fade 0.5s;
-        animation-timing-function: ease-in-out;
-    }
-    nav.flex-full{
-        justify-content: unset;
-        align-items: flex-start;
-        gap: 20px;
-    }
-    .drop{
-        top: 30px;
-        
-    }
-    .drop-mix{
-        right: auto;
-    }
-    .mob{
-        display: flex;
-    }
-    
-}
+
 @media(max-width: 876px){
     /* learning-path-section */
     .lp .flex-full{
@@ -394,7 +216,7 @@ footer{
     }
 }
 @media(max-width: 768px ){
-    /* header */
+    
 
 
     /* main-section */
@@ -410,6 +232,9 @@ footer{
         line-height: 1.3;
         font-size: 1rem;
     }
+    .custom-shape-divider-bottom-1689573313{
+        display: none;
+    }
     /* news-section */
     .news .container{
     gap: 5%;
@@ -419,14 +244,7 @@ footer{
      height: 110px;
      margin-bottom: 20px;
     }
-    /* footer */
-    .icons a{
-    padding: 6px;
-    margin-left: 2px;
-    }
-    footer p{
-        font-size: 0.8rem;
-    }
+    
 }
 @media(max-width: 650px){
     /* latest-front-end-app ++ latest-articles ++ random-articles */
@@ -443,19 +261,10 @@ footer{
         padding: 10px 50px;
         
     }
-    /* footer */
-    .icons a{
-        padding: 4px;
-        margin-left: 1px;
-        }
-        footer p{
-            font-size: 0.6rem;
-        }
+    
 }
 @media(max-width: 375px ){
-    /* header */
-
-
+    
     /* main-section */
     .main-search{
         width: 200px;
@@ -470,7 +279,6 @@ footer{
     }
     .main-search button{
         padding: 5px;
-        top: 3px;
         font-size: 0.7rem;
     }
     .main-info h2{
@@ -507,27 +315,27 @@ footer{
         width: 95%;
         height: 140px;
     }
-    /* footer */
-    .icons a{
-        padding: 3px;
-        margin-left: 1px;
+    /* footer-section */
+    footer.flex-full{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px 0;
     }
-    footer p{
-        font-size: 0.5rem;
-    }   
+    footer .copy-right p{
+        font-size: 60%;
+    }
+    .icons a {
+        padding: 6px;
+    }  
 }
 @media(max-width: 220px ){
-    /* header */
-
-
+    
     /* main-section */
     .main-search{
         width: 130px;
         font-size: 0.5rem;
     }
     .main-search button{
-        padding: 5px;
-        top: 3px;
         font-size: 0.5rem;
     }
     .main-info h2{
@@ -542,13 +350,5 @@ footer{
      .new-box{
         width: 100%;
         height: 170px;
-    }
-     /* footer */
-     .icons a{
-        padding: 3px;
-        margin-left: 1px;
-        }
-        footer p{
-            font-size: 0.38rem;
-        }
+    } 
 }
